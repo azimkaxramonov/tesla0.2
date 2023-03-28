@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+ 
+  .photo {
+    display: flex;
+    justify-content: center;
+
+    .burger {
+      position: absolute;
+      margin-top: 20px;
+      right: 0;
+      width: 100px;
+      height: 20px;
+
+      .item {
+        width: 40px;
+        height: 10px;
+        background-color: rgb(66, 65, 65);
+        border: solid 1px;
+        margin-top: 3px;
+        border-radius: 20px;
+
+
+      }
+    }
+
+    img {
+      width: 1540px;
+      margin: 0 auto;
+
+      object-fit: cover;
+
+    }
+
+
+  }
+}
+
+.cont {
+  .flexbox {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+
+    .item {
+      width: 300px;
+      height: 110px;
+
+      p {
+        font-size: 24px;
+        font-weight: 500;
+        color: #707070;
+      }
+
+      h2 {
+        padding-top: 10px;
+        font-size: 64px;
+        font-weight: 700;
+      }
+    }
+  }
+
+}
+
+.contsetting {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 55px;
+  height: 100px;
+
+  .changespeedbox {
+    display: flex;
+    max-width: 270px;
+    height: 100px;
+    gap: 30px;
+
+    .speedcar {
+      p {
+        color: #707070;
+      }
+
+      h1 {
+        font-size: 48px;
+        font-weight: 700;
+      }
+    }
+
+    .temperature {
+      p {
+        color: #707070;
+      }
+
+      h1 {
+        font-size: 48px;
+        font-weight: 700;
+      }
+
+    }
+
+    .disks {
+      p {
+        color: #707070;
+      }
+
+      h1 {
+        font-size: 48px;
+        font-weight: 700;
+      }
+    }
+
+    .changespeed {
+
+      img {
+        width: 30px;
+      }
+
+      button {
+        margin-top: 5px;
+        background-color: white;
+        line-height: 0;
+        border: solid 0px;
+      }
+
+    }
+  }
+
+  @mixin maSwitch($width: 60px, $color: #0a3d55) {
+    .ma-switch {
+      --width: #{$width};
+      --height: calc(var(--width) / 2);
+      --color: #{$color};
+      position: relative;
+      display: inline-block;
+      width: var(--width);
+      height: var(--height);
+      margin: 0;
+
+      .slider {
+        --slider-size: calc(var(--height) - 2px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #ccc;
+        cursor: pointer;
+        transition: .4s;
+        overflow: hidden;
+
+
+        &::before {
+          position: absolute;
+          left: 1px;
+          bottom: 1px;
+          height: var(--slider-size);
+          width: var(--slider-size);
+          background-color: white;
+          transition: .4s;
+          transform-origin: left;
+          box-shadow: 0 0 8px rgba(0, 0, 0, .3);
+          content: '';
+        }
+
+        &.round {
+          border-radius: 100px;
+
+          &::before {
+            border-radius: 50%;
+          }
+        }
+      }
+
+      input {
+        width: 0;
+        height: 0;
+        opacity: 0;
+
+        &:checked+.slider {
+          background-color: rgb(52, 104, 226);
+        }
+
+        &:focus+.slider {
+          box-shadow: 0 0 1px var(--color);
+        }
+
+        &:checked+.slider:before {
+          transform: translateX(calc(var(--width) / 2));
+        }
+      }
+    }
+  }
+
+  .conta {
+    @include maSwitch;
+    gap: 8px;
+
+    user-select: none;
+
+    .title {
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #707070;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+  }
+}
+
+.content {
+  .modalwindow {
+   display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 600px;
+    height: 1205px;
+    background-color: black;
+    animation-duration: 1.0s;
+    opacity: 0;
+    animation-name: modal;
+    z-index: 1;
+
+    .close {
+      display: flex;
+      justify-content: end;
+      margin-top: 12px;
+      margin-right: 12px;
+    }
+
+    .bomb {
+      width: 300px;
+      height: 600px;
+     margin: 0 auto;
+     margin-top: 300px;
+
+      .menu{
+        color: white;
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 30px;
+      }
+      .elem{
+        margin-top: 12px;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+
+@keyframes modal {
+    from {right:-600px; opacity:0} 
+    to {right:0; opacity:1}
+}
+.door{
+   width: 210px;
+  height: 144px;
+  left: 845px;
+  top: 374px;
+  position: absolute;
+  background-color: black;
+  border: solid 0px;
+  opacity: 0;
+  
+}
+.teslaimg{
+  animation-duration: 2s;
+  animation-name: none;
+  transition: 2s;
+ 
+}
+
+@keyframes open{
+0%{
+  scale: 0;
+}
+100%{
+  scale: 10;
+}
+}
+@keyframes close{
+  0%{
+    scale: 10;
+  }
+  100%{
+    scale: 1;
+  }
+}
+
+.active{}
