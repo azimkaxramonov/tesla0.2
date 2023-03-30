@@ -133,21 +133,30 @@ close.onclick = () => {
     }, 400)
 }
 let door = document.querySelector('.door')
-let img =document.querySelector('.teslaimg')
+let door_top = document.querySelector('.door_top')
+let salonmodal = document.querySelector('.salonmodal1')
+let carmodal = document.querySelector('.carmodal')
+let img = document.querySelector('.teslaimg')
+let image = document.querySelector('.teslaimg_top')
 door.onclick = () => {
     img.style.animationName = 'open'
-    img.classList.toggle('active')
+    image.style.animationName = 'close'
     setTimeout(() => {
-        if (img.classList.contains('active')) {
-            img.setAttribute('src', 'img/image 2.svg')
-        } else {
-            img.setAttribute('src', 'img/image 1.svg')
-        }
-        img.style.animationName = 'close'
-        showSlides()
-        
+            carmodal.style.display = 'none'
+           salonmodal.style.display = 'contents'
     }, 1900)
 }
+door_top.onclick = () => {
+    image.style.animationName = 'open'
+    img.style.animationName ="close"
+    setTimeout(() => {
+        
+            carmodal.style.display = 'contents'
+            salonmodal.style.display = 'none'
+           
+    }, 1900)
+}
+
 
 
 

@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+}
+
+.carmodal {
+  display: contents;
 }
 
 .container .photo {
@@ -219,18 +224,12 @@
 .door {
   width: 210px;
   height: 144px;
-  left: 845px;
-  top: 374px;
+  margin-top: 240px;
+  margin-left: 595px;
   position: absolute;
   background-color: black;
   border: solid 0px;
   opacity: 0;
-}
-
-.teslaimg {
-  animation-duration: 2s;
-  animation-name: none;
-  transition: 2s;
 }
 
 @keyframes open {
@@ -248,4 +247,134 @@
   100% {
     scale: 1;
   }
+}
+.salonmodal1 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 244px;
+}
+
+.container3 .photo3 {
+  display: flex;
+}
+.container3 .photo3 img {
+  width: 1540px;
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cont2 .flexbox {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.cont2 .flexbox .item {
+  width: 300px;
+  height: 110px;
+}
+.cont2 .flexbox .item p {
+  font-size: 24px;
+  font-weight: 500;
+  color: #707070;
+}
+.cont2 .flexbox .item h2 {
+  padding-top: 10px;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.contfooter .change {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+.contfooter .change .colorcar p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #707070;
+}
+.contfooter .change .colorcar .color {
+  padding-top: 10px;
+  width: 200px;
+  display: flex;
+  gap: 10px;
+}
+.contfooter .change .colorcar .color .elem button {
+  border: solid 0px;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
+}
+.contfooter .change .colorcar .color .elem #white {
+  background-color: #EFEFEF;
+}
+.contfooter .change .colorcar .color .elem #beige {
+  background-color: #E6DDD0;
+}
+.contfooter .change .type_of_car {
+  width: 200px;
+}
+
+.door_top {
+  width: 210px;
+  height: 144px;
+  margin-top: 315px;
+  margin-left: 635px;
+  position: absolute;
+  background-color: black;
+  border: solid 0px;
+  opacity: 0;
+}
+
+.teslaimg_top {
+  animation-duration: 2s;
+  animation-name: none;
+  transition: 2s;
+}
+
+#wheel-one {
+  margin-top: 290px;
+  margin-left: 380px;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  animation-name: rotation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#wheel-two {
+  margin-top: 290px;
+  margin-left: 982px;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: none;
+  animation-name: rotation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.teslaimg {
+  z-index: 5;
+  animation-duration: 2s;
+  animation-name: none;
+  transition: 2s;
+}
+
+.bg {
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
